@@ -1,0 +1,56 @@
+
+> super-simple-sheet@0.1.0 build C:\MJ\super-simple-sheet
+> next build
+
+??Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+??Compiled successfully in 992ms
+  Running TypeScript ...
+  Finished TypeScript in 1095ms ...
+  Collecting page data using 9 workers ...
+Error: Could not locate the bindings file. Tried:
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\build\better_sqlite3.node
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\build\Debug\better_sqlite3.node
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\build\Release\better_sqlite3.node
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\out\Debug\better_sqlite3.node
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\Debug\better_sqlite3.node
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\out\Release\better_sqlite3.node
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\Release\better_sqlite3.node
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\build\default\better_sqlite3.node
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\compiled\24.13.1\win32\x64\better_sqlite3.node
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\addon-build\release\install-root\better_sqlite3.node
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\addon-build\debug\install-root\better_sqlite3.node
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\addon-build\default\install-root\better_sqlite3.node
+ ??C:\MJ\super-simple-sheet\node_modules\.pnpm\better-sqlite3@12.8.0\node_modules\better-sqlite3\lib\binding\node-v137-win32-x64\better_sqlite3.node
+    at module evaluation (C:\MJ\super-simple-sheet\.next\server\chunks\[root-of-the-server]__0if_-9m._.js:1:1266)
+    at instantiateModule (C:\MJ\super-simple-sheet\.next\server\chunks\[turbopack]_runtime.js:853:9)
+    at getOrInstantiateModuleFromParent (C:\MJ\super-simple-sheet\.next\server\chunks\[turbopack]_runtime.js:877:12)
+    at Context.esmImport [as i] (C:\MJ\super-simple-sheet\.next\server\chunks\[turbopack]_runtime.js:281:20)
+    at module evaluation (C:\MJ\super-simple-sheet\.next\server\chunks\[root-of-the-server]__0su444l._.js:25:33552)
+    at instantiateModule (C:\MJ\super-simple-sheet\.next\server\chunks\[turbopack]_runtime.js:853:9)
+    at instantiateRuntimeModule (C:\MJ\super-simple-sheet\.next\server\chunks\[turbopack]_runtime.js:882:12)
+    at getOrInstantiateRuntimeModule (C:\MJ\super-simple-sheet\.next\server\chunks\[turbopack]_runtime.js:895:12) {
+  tries: [
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\build\\better_sqlite3.node',
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\build\\Debug\\better_sqlite3.node',
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\build\\Release\\better_sqlite3.node',
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\out\\Debug\\better_sqlite3.node',
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\Debug\\better_sqlite3.node',
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\out\\Release\\better_sqlite3.node',
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\Release\\better_sqlite3.node',
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\build\\default\\better_sqlite3.node',
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\compiled\\24.13.1\\win32\\x64\\better_sqlite3.node',
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\addon-build\\release\\install-root\\better_sqlite3.node',
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\addon-build\\debug\\install-root\\better_sqlite3.node',
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\addon-build\\default\\install-root\\better_sqlite3.node',
+    'C:\\MJ\\super-simple-sheet\\node_modules\\.pnpm\\better-sqlite3@12.8.0\\node_modules\\better-sqlite3\\lib\\binding\\node-v137-win32-x64\\better_sqlite3.node'
+  ]
+}
+
+> Build error occurred
+Error: Failed to collect page data for /[format]/[tableName]
+    at ignore-listed frames {
+  type: 'Error'
+}
+?덭LIFECYCLE??Command failed with exit code 1.

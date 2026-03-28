@@ -3,17 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 5555",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.10.0",
+    "better-sqlite3": "^12.8.0",
+    "js2xmlparser": "^5.0.0",
+    "json2csv": "5.0.7",
     "next": "16.2.1",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "yaml": "^2.8.3"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/json2csv": "^5.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
