@@ -9,12 +9,16 @@ export default async function SheetPage({ params }: { params: Promise<{ appSegme
   const rawParams = await params;
   const tableName = decodeURIComponent(rawParams.appSegment);
   
-  if (['api', 'json', 'csv', 'yaml', 'yml', 'xml'].includes(tableName)) {
+  if (['api', 'json', 'csv', 'yaml', 'yml', 'xml', 'favicon.ico'].includes(tableName)) {
      return notFound();
   }
 
   let row;
-  try { row = db.getSheet(tableName); } catch (e) {}
+  try { 
+    row = await db.getSheet(tableName); 
+  } catch (e) {
+    console.error('Error fetching sheet:', e);
+  }
 
   if (!row) return notFound();
 
