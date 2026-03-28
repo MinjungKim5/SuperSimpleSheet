@@ -68,6 +68,19 @@ export function SheetEditor({ initialTableName, initialData }: { initialTableNam
     setData(data.map(row => ({ ...row, [newColName]: '' })));
   };
 
+  const updateColumnName = (oldName: string) => {
+    const newName = prompt(`'${oldName}' 열의 새로운 이름을 입력하세요:`, oldName);
+    if (!newName || newName === oldName) return;
+    if (columns.includes(newName)) return alert('이미 존재하는 열 이름입니다.');
+
+    setData(data.map(row => {
+      const newRow = { ...row };
+      newRow[newName] = newRow[oldName];
+      delete newRow[oldName];
+      return newRow;
+    }));
+  };
+
   const removeColumn = (colToRemove: string) => {
     if (columns.length <= 1) return alert('최소 1개의 열은 남겨두어야 합니다.');
     if (!confirm(`'${colToRemove}' 열을 삭제합니까? 데이터도 함께 지워집니다.`)) return;
@@ -141,10 +154,18 @@ export function SheetEditor({ initialTableName, initialData }: { initialTableNam
               {columns.map(col => (
                 <th key={col} style={{ minWidth: '120px' }}>
                   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', padding: '0.5rem' }}>
-                    <span style={{ fontSize: '0.9rem' }}>{col}</span>
+                    <span 
+                      style={{ fontSize: '0.9rem', cursor: 'pointer', flex: 1, padding: '2px 4px', borderRadius: '4px' }} 
+                      onClick={() => updateColumnName(col)}
+                      onMouseOver={e => e.currentTarget.style.backgroundColor = 'rgba(0,0,0,0.05)'}
+                      onMouseOut={e => e.currentTarget.style.backgroundColor = 'transparent'}
+                      title="클릭하여 이름 수정"
+                    >
+                      {col}
+                    </span>
                     <button 
                       onClick={() => removeColumn(col)} 
-                      style={{ background: 'transparent', border: 'none', color: '#9ca3af', fontSize: '1rem', transition: 'color 0.2s', padding: '0 2px' }}
+                      style={{ background: 'transparent', border: 'none', color: '#9ca3af', fontSize: '1rem', transition: 'color 0.2s', padding: '0 2px', cursor: 'pointer' }}
                       onMouseOver={e=>e.currentTarget.style.color='var(--error)'} 
                       onMouseOut={e=>e.currentTarget.style.color='#9ca3af'}
                       title="이 열 삭제"
